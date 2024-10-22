@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-select {
+    @apply relative inline-block w-48;
+}
+
+.custom-select {
+    @apply block w-[200px] px-4 py-2 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-200;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5' /%3E%3C/svg%3E%0A");
+    background-size: 14px;
+}
+
+input:focus {
+  outline: none  
+}
+
+textarea:focus {
+  outline: none  
+}
+
+select option:checked {
+    background-color: #3C65F5; /* Violeta */
+    color: #fff; /* Texto blanco */
+  }
+  select option:hover {
+    background-color: #3C65F5; /* Violeta */
+    color: #fff; /* Texto blanco */
+  }
+
+/* .fondo {
+  background-image: url("../../public/bg-banner.svg");
+} */
+
+.spanAfter::after {
+  content: "";
+  background-color: #3C65F5;
+  height: 25px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -4px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.spanAfterSm::after {
+  content: "";
+  background-color: #3C65F5;
+  height: 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -4px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.form-container {
+  padding-bottom: calc(2rem + 0.7rem);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  border-radius: 24px;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 22px;
+  color: #ffffff;
+  overflow: hidden;
+  background: #3C65F5;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::before {
+  position: absolute;
+  content: "";
+  top: -4%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  background: #ced8ff;
+  z-index: -1;
+  transform-origin: bottom;
+
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  background: #e7ecff;
+  z-index: -2;
+  transform-origin: bottom;
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content svg {
+  width: 48px;
+  height: 48px;
+}
+
+.content .para {
+  z-index: 1;
+  opacity: 1;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .link {
+  z-index: 1;
+  color: #fea000;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .link:hover {
+  text-decoration: underline;
+}
+
+.card:hover {
+  transform: translate(0px, -16px);
+}
+
+.card:hover .content::before {
+  rotate: -8deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover .content::after {
+  rotate: 8deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.toastify {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Opcional, si quieres que esté a la izquierda */
+  padding: 15px;
+  color: white;
+  background: #3C65F5;
+  margin: 0 30px 30px 20px; 
+  width: 24rem; 
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  animation: slideInFromLeft 0.5s ease;
+  z-index: 100;
+}
+
+
+/* animations */
+
+@keyframes desactivating-dark-mode {
+  to {
+    transform: translate(2.5em);
+  }
+}
+
+@keyframes activating-dark-mode {
+  to {
+    transform: translate(-2.5em);
+  }
+}
+
+@keyframes sun-effect-icon {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes moon-effect-icon {
+  50% {
+    transform: translateY(-0.6em) scale(0.8);
+  }
+  100% {
+    transform: translateY(1.5em);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.swiper-wrapper {
+  padding: 20px 0;
+}
+
+.swiper-container .swiper-button-prev,
+.swiper-container .swiper-button-next {
+  width: 24px;
+  height: 24px;
+  color: #3C65F5; /* Cambia el color de las flechas según tus necesidades */
+}
+
+.swiper-container .swiper-button-prev::after,
+.swiper-container .swiper-button-next::after {
+  font-size: 16px;
+}

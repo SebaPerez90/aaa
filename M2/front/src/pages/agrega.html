@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../public/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../../public/logo.ico"
+      type="image/x-icon"
+    />
+    <title>CineFlix</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-logo">
+        <img src="../assets/logo.png" alt="CineFLix-logo" />
+        <span>CineFLix</span>
+      </div>
+      <nav class="nav-bar" id="nav-bar">
+        <ul class="unorderlist-nav">
+          <li>
+            <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="./sobremi.html">sobre mi</a></li>
+          <li><a href="#nav-bar">agrega pelicula</a></li>
+        </ul>
+      </nav>
+      <div class="session">
+        <buttton><i class="fa-solid fa-user"></i></buttton>
+        <buttton><i class="fa-solid fa-right-from-bracket"></i></buttton>
+      </div>
+    </header>
+    <main class="main-container">
+      <header>
+        <h1>Cansado de ver siempre lo mismo ? 🤔</h1>
+        <p>
+          Ahora con nuestra app vas a poder disfrutar de nuestro servicio de
+          agregar peliculas para que el entretenimiento no tenga fin.<br />
+          Lo único que tenes que hacer es llenar todos los campos del formulario
+          y listo. <br><br> Facil, Rapido y Sencillo 😏
+        </p>
+      </header>
+      <span class="error-message">TODOS LOS CAMPOS DEBEN ESTAR COMPLETOS</span>
+      <form id="form" class="form-container">
+        <span class="successfully-message"
+          >PELICULA CREADA EXITOSAMENTE 🚀</span
+        >
+        <div class="wraper">
+          <label for="title">
+            Titulo
+            <input
+              class="input-item"
+              id="title"
+              placeholder=" Avengers Infinity War"
+              autocomplete="off"
+              name="title"
+              type="text"
+            />
+          </label>
+
+          <label for="director">
+            Director
+            <input
+              class="input-item"
+              id="director"
+              placeholder="James Gun"
+              autocomplete="off"
+              name="director"
+              type="text"
+            />
+          </label>
+        </div>
+
+        <div class="wraper">
+          <label for="rate">
+            Calificación
+            <input
+              class="input-item"
+              id="rate"
+              placeholder="10"
+              autocomplete="off"
+              name="rate"
+              type="number"
+              max="10"
+            />
+          </label>
+
+          <label class="year-label" for="year">
+            Año Lanzamiento
+            <input
+              class="input-item"
+              id="year"
+              placeholder="2024"
+              autocomplete="off"
+              name="year"
+              type="text"
+              maxlength="4"
+            />
+            <span class="input-error"
+              >Debe ser un número de una fecha real</span
+            >
+          </label>
+        </div>
+
+        <div>
+          <label class="url-container" for="poster">
+            URL Poster
+            <input
+              class="input-item"
+              id="poster"
+              placeholder="htttps://example.jpg ..."
+              autocomplete="off"
+              name="poster"
+              type="text"
+            />
+          </label>
+
+          <div class="genre-container">
+            <span>Generos</span>
+            <label class="checkbox-item" for="action-checkbox">
+              Acción
+              <input id="action-checkbox" value="action" type="checkbox" />
+            </label>
+            <label class="checkbox-item" for="adventure-checkbox">
+              Aventura
+              <input
+                id="adventure-checkbox"
+                value="adventure"
+                type="checkbox"
+              />
+            </label>
+            <label class="checkbox-item" for="comedy-checkbox">
+              Comedia
+              <input id="comedy-checkbox" value="comedy" type="checkbox" />
+            </label>
+            <label class="checkbox-item" for="fantasy-checkbox">
+              Fantasia
+              <input id="fantasy-checkbox" value="fantasy" type="checkbox" />
+            </label>
+            <label class="checkbox-item" for="sciFi-checkbox">
+              Ficción
+              <input id="sciFi-checkbox" value="sci-fi" type="checkbox" />
+            </label>
+            <label class="checkbox-item" for="drama-checkbox">
+              Drama
+              <input id="drama-checkbox" value="drama" type="checkbox" />
+            </label>
+          </div>
+        </div>
+        <button type="reset" class="btn-clear" aria-label="clear-btn" id="clear-btn">
+          Limpiar Campos
+        </button>
+        <button class="btn-active" aria-label="send-btn" id="send-btn">
+          Agregar Pelicula <strong>🎞️</strong>
+        </button>
+      </form>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/e3f06d0b4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../scripts/form.js"></script>
+  </body>
+</html>
